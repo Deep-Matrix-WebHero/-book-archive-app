@@ -2,43 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Archive</title>
-
     <!-----------------------------
          bootstrap-css link 
     -------------------------------->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 </head>
 
-<body class="bg-secondary text-center text-warning">
-    <h1>Book Archive </h1>
-    <!-- input field / book search area-->
-    <div class="input-group mb-3  w-50 mx-auto">
-        <!-- search field -->
-        <input id="search-field" type="text" class="form-control" placeholder="Search book by name" aria-label="Recipient's username" aria-describedby="button-addon2">
-
-        <!-- search button -->
-
-        <button onclick="SearchBooks()" class="btn btn-outline-danger" type="button" id="search-btn">SearchBooks</button>
+<body>
+    <h1 class="text-center text-warning m-3 bg-success p-2">
+        Search Your Favorite Book!
+    </h1>
+    <div class="input-group mb-3 w-50 mx-auto">
+        <input id="input-field" type="text" class="form-control" placeholder="Search Your Favorite Book!" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <button onclick="searchBook()" class="btn btn-outline-secondary" type="button" id="myBtn">
+        Search
+      </button>
     </div>
-    <!-- book search results -->
-    <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- search result -->
+    <div id="total-search"></div>
 
-        <div class="col">
+    <!-- error handling -->
+    <div class="" id="error"></div>
+
+    <!-- display book div -->
+    <div id="book-container" class="row row-cols-1 row-cols-md-4 g-4">
+        <!-- <div class="col">
             <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">
+                        This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
-
-
     <!-------------------
          bootstrap  js link 
     ------------------->
@@ -46,8 +49,7 @@
     <!-------------------
         javascript link 
     ---------------------->
-    <script src="./js/app.js"></script>
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>
